@@ -62,7 +62,7 @@ angular.module('parcelConfig').component('parcelSize', {
                     // First function handles success
                     console.log(response.data);
 
-                    $rootScope.parcelsize = response.data;e);
+                    $rootScope.parcelsize = response.data;
                 }, function (response) {
                     // Second function handles error
                     console.log(response);
