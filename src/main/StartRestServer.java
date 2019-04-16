@@ -1,11 +1,8 @@
-package main;
-
-import java.io.IOException;
-
-import javax.swing.JOptionPane;
-
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.net.httpserver.HttpServer;
+
+import javax.swing.*;
+import java.io.IOException;
 
 public class StartRestServer {
 
