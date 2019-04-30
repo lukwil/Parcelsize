@@ -96,3 +96,31 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+
+task buildLocal(type: WriteProperties){
+        outputFile file("java.properties")
+        property 'mySqlPath', "jdbc:mysql://localhost/sfta?user=root&password=&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+}
+buildLocal.finalizedBy(build)
+
+
+task changePathForDocker(type: WriteProperties){
+    outputFile file("java.properties")
+    property 'mySqlPath', "jdbc:mysql://db/sfta?user=root&password=&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+
+}
+
+
+
+task copySettings(type: Copy) {
+    from file("java.properties")
+    into file("$buildDir/libs/")
+}
+
+
+task buildDocker {
+    dependsOn('changePathForDocker')
+    dependsOn('copySettings')
+    changePathForDocker.finalizedBy(copySettings)
+}

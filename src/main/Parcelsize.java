@@ -1,9 +1,13 @@
 //import com.google.gson.Gson;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Properties;
 
 public class Parcelsize {
 	private String length;
@@ -30,19 +34,27 @@ public class Parcelsize {
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-			String userName = "root";
-			String password = "";
-			String url = "jdbc:mysql://localhost/sfta";
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/sfta?user=root&password=&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
-			System.out.println("Database Connection established...");
-			PreparedStatement ps = conn.prepareStatement("SELECT size_type FROM parcel_size WHERE ? BETWEEN girth_min_cm AND girth_max_cm;");
-			ps.setInt(1, girth);
-			ResultSet result = ps.executeQuery();
 
-			//Statement statement = conn.createStatement();
-			//ResultSet result = statement.executeQuery("SELECT size_type FROM parcel_size WHERE 35 BETWEEN girth_min_cm AND girth_max_cm;");
-			result.next();
-			this.size = result.getString(1);
+			Properties p = new Properties();
+			try {
+				p.load(new BufferedInputStream(new FileInputStream("java.properties")));
+				String dbPath = p.getProperty("mySqlPath");
+
+				conn = DriverManager.getConnection(dbPath);
+				System.out.println("Database Connection established...");
+				PreparedStatement ps = conn.prepareStatement("SELECT size_type FROM parcel_size WHERE ? BETWEEN girth_min_cm AND girth_max_cm;");
+				ps.setInt(1, girth);
+				ResultSet result = ps.executeQuery();
+
+				//Statement statement = conn.createStatement();
+				//ResultSet result = statement.executeQuery("SELECT size_type FROM parcel_size WHERE 35 BETWEEN girth_min_cm AND girth_max_cm;");
+				result.next();
+				this.size = result.getString(1);
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
 
 
 		} catch (Exception ex){
