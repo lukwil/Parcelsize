@@ -26,7 +26,7 @@ angular.module('parcelConfig').component('parcelSize', {
 
 
         '<div class="w3-container">' +
-        '<h4>Groesse: Bla</h4>' +
+        '<h4>Groesse: Teeeeset</h4>' +
         '</div>' +
 
 
@@ -49,7 +49,15 @@ angular.module('parcelConfig').component('parcelSize', {
         '</div>',
 
     controller: function ParcelSizeController($rootScope, $http, $window) {
-        this.UpdateSize = function () {
+        var self = this;
+
+        this.parcelsize = {
+            length: "0",
+            width: "0",
+            height: "0",
+            size: ""
+        };
+        this.UpdateSize = function ($ctrl) {
             data = {
                 length: this.parcelsize.length,
                 width: this.parcelsize.width,
@@ -62,7 +70,7 @@ angular.module('parcelConfig').component('parcelSize', {
                     // First function handles success
                     console.log(response.data);
 
-                    $rootScope.parcelsize = response.data;
+                    self.parcelsize.size = response.data.size;
                 }, function (response) {
                     // Second function handles error
                     console.log(response);
