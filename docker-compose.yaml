@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  parcelsizeService:
+    image: openjdk:8-jre-alpine
+    container_name: sftaParcelsizeService
+    restart: always
+    ports:
+      - '8081:8081'
+    networks:
+      - sfta
+    volumes:
+      - ./build/libs/:/etc/
+    #command: ["java", "-Djava.security.egd=file:dev/./urandom", "-jar", "/etc/Parcelsize-0.1.jar"]
+    command: ["cd /etc && java -jar Parcelsize-0.1.jar"]
+networks:
+  sfta:
+    external: true
