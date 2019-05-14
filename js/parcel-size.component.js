@@ -65,7 +65,7 @@ angular.module('parcelConfig').component('parcelSize', {
                 size: this.parcelsize.size
             };
 
-            $http.post("http://localhost:8081/api/parcelsize", data)
+            $http.post("http://192.168.50.1:8083/api/parcelsize", data)
                 .then(function (response) {
                     // First function handles success
                     console.log(response.data);
