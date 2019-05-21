@@ -3,6 +3,7 @@ FROM openjdk:8-jre-alpine
 WORKDIR /etc
 
 ADD ./build/libs /etc
+ADD ./java.properties /etc
 
 EXPOSE 8081
 

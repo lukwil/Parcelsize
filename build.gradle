@@ -124,3 +124,7 @@ task buildDocker {
     dependsOn('copySettings')
     changePathForDocker.finalizedBy(copySettings)
 }
+
+task runIntegrationTest(type: JavaExec) { 
+    
+}
