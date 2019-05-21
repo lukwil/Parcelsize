@@ -64,8 +64,8 @@ angular.module('parcelConfig').component('parcelSize', {
                 height: this.parcelsize.height,
                 size: this.parcelsize.size
             };
-            // Greife auf Datei im Asset-Server (= Docker-Image) zu
-            $http.post("http://192.168.50.1:8083/api/parcelsize", data)
+            // Greife auf Microservice zu zu
+            $http.post("http://localhost:8081/api/parcelsize", data)
                 .then(function (response) {
                     // First function handles success
                     console.log(response.data);
