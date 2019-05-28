@@ -88,10 +88,7 @@ dependencies {
     // MySQL connector
     // https://mvnrepository.com/artifact/mysql/mysql-connector-java
     compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.15'
-
-    // For Cors Filter
-    // https://mvnrepository.com/artifact/javax/javaee-web-api
-    provided group: 'javax', name: 'javaee-web-api', version: '8.0.1'
+    
 
 }
 // end::dependencies[]
