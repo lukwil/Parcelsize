@@ -19,12 +19,8 @@ public class MessageRessource {
 		p.setWidth(parcelsize.getWidth());
 		p.calculateSize();
 		System.out.println(p.toString());
-		return Response.status(202).entity(p).header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Credentials", "true")
-				.header("Access-Control-Allow-Headers",
-						"origin, content-type, accept, authorization")
-				.header("Access-Control-Allow-Methods",
-						"GET, POST, PUT, DELETE, OPTIONS, HEAD").build();
+        return Response.ok().entity(p).header("Access-Control-Allow-Origin", "*")
+                .build();
 	    //return parcelsize;
 	}
 }
