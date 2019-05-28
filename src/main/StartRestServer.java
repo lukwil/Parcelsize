@@ -5,6 +5,7 @@ import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;
 import com.sun.net.httpserver.HttpServer;
 
+import javax.swing.*;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -31,7 +32,7 @@ public static void main(String[] args) {
 	}
 	System.out.println(p.getProperty("mySqlPath"));
 	JOptionPane.showMessageDialog( null, "Ende" );
-
+	//System.in.readLine("");
 	server.stop( 0 );
 	}
 
