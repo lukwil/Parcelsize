@@ -19,7 +19,7 @@ public class MessageRessource {
 		p.setWidth(parcelsize.getWidth());
 		p.calculateSize();
 		System.out.println(p.toString());
-        return Response.ok().entity(p).header("Access-Control-Allow-Origin", "*")
+        return Response.status(202).entity(p)
                 .build();
 	    //return parcelsize;
 	}
