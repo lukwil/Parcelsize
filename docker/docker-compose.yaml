@@ -11,8 +11,8 @@ services:
       - sfta
     volumes:
       - ./build/libs/:/etc/
-    #command: ["java", "-Djava.security.egd=file:dev/./urandom", "-jar", "/etc/Parcelsize-0.1.jar"]
-    command: ["cd /etc && java -jar Parcelsize-0.1.jar"]
+    #command: ["java", "-Djava.security.egd=file:dev/./urandom", "-jar", "/etc/main.Parcelsize-0.1.jar"]
+    command: ["cd /etc && java -jar main.Parcelsize-0.1.jar"]
 networks:
   sfta:
     external: true

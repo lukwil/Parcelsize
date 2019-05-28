@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'StartRestServer'
+mainClassName = 'main.StartRestServer'
 
 
 repositories {
@@ -25,10 +25,10 @@ sourceSets
 
 // tag::jar[]
 jar {
-    baseName = 'Parcelsize'
+    baseName = 'main.Parcelsize'
     version = '0.1'
     manifest {
-        attributes 'Main-Class': 'StartRestServer'
+        attributes 'Main-Class': 'main.main.StartRestServer'
     }
 
     from {

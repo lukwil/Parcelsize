@@ -1,10 +1,10 @@
+package main;
 
 import com.sun.jersey.api.container.httpserver.HttpServerFactory;
 import com.sun.jersey.api.core.PackagesResourceConfig;
 import com.sun.jersey.api.core.ResourceConfig;
 import com.sun.net.httpserver.HttpServer;
 
-import javax.swing.*;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -13,8 +13,8 @@ import java.util.Properties;
 public class StartRestServer {
 
 public static void main(String[] args) {
-	ResourceConfig rc = new PackagesResourceConfig("");
-	rc.getProperties().put("com.sun.jersey.spi.container.ContainerResponseFilters", "CorsFilter");
+	ResourceConfig rc = new PackagesResourceConfig("main");
+	rc.getProperties().put("com.sun.jersey.spi.container.ContainerResponseFilters", "main.CorsFilter");
 	HttpServer server = null;
 	try {
 		server = HttpServerFactory.create("http://localhost:8081/api/", rc);

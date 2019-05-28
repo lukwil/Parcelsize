@@ -1,4 +1,4 @@
-//package main2;
+package main;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;

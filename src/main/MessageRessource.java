@@ -1,4 +1,4 @@
-//package main2;
+package main;//package main2;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
