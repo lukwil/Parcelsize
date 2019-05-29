@@ -28,7 +28,7 @@ jar {
     baseName = 'main.Parcelsize'
     version = '0.1'
     manifest {
-        attributes 'Main-Class': 'main.main.StartRestServer'
+        attributes 'Main-Class': 'main.StartRestServer'
     }
 
     from {
