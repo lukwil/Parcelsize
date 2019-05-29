@@ -43,43 +43,30 @@ jar {
 dependencies {
     // JERSEY
     // https://mvnrepository.com/artifact/com.sun.jersey/jersey-bundle
-    compile group: 'com.sun.jersey', name: 'jersey-bundle', version: '1.19.4'
-
-    // Irgendwas für JSON
-    // https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson
-    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.27'
+    compile group: 'com.sun.jersey', name: 'jersey-bundle', version: '1.19.1'
 
 
     // ASM CORE
-    // https://mvnrepository.com/artifact/asm/asm-all
-    compile group: 'asm', name: 'asm-all', version: '3.1'
+    // https://mvnrepository.com/artifact/asm/asm
+    compile group: 'asm', name: 'asm', version: '3.1'
 
     // JSR
     // https://mvnrepository.com/artifact/org.apache.bval/bval-jsr
     compile group: 'org.apache.bval', name: 'bval-jsr', version: '1.1.1'
 
-    // https://mvnrepository.com/artifact/javax.ws.rs/jsr311-api
-    compile group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
-
     // JAVA-JSON
-    //https://mvnrepository.com/artifact/org.json/json
+    // https://mvnrepository.com/artifact/org.json/json
     compile group: 'org.json', name: 'json', version: '20180130'
 
-    // GENSON (JSON for Jersey)
-    // https://mvnrepository.com/artifact/com.owlike/genson
-   // compile group: 'com.owlike', name: 'genson', version: '1.5'
-
-
-    // JUNIT
-    // https://mvnrepository.com/artifact/junit/junit
-
+    // JSR311 API
+    compile group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
 
     testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
 
 
     // Download Jackson (for JSON interaction in JAVA code)
-    testCompile("org.codehaus.jackson:jackson-mapper-asl:1.9.0")
+    //testCompile("org.codehaus.jackson:jackson-mapper-asl:1.9.0")
 
     // Download selenium plugins for UAT Tests
     compile group: 'net.bytebuddy', name: 'byte-buddy', version: '1.8.15'

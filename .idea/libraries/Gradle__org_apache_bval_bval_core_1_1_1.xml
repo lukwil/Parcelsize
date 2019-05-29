@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.bval:bval-core:1.1.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.bval/bval-core/1.1.1/7ef08d4d2106d37e0b5a0989a8bd6611b5e58564/bval-core-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.bval/bval-core/1.1.1/1ea097a24fbf69a8126af5ca3908bd1ddddf3114/bval-core-1.1.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
