@@ -12,10 +12,10 @@ import java.util.Properties;
 
 @XmlRootElement
 public class Parcelsize {
-    public String length;
-    public String width;
-    public String height;
-    public String size;
+    private String length;
+    private String width;
+    private String height;
+    private String size;
 
     public Parcelsize() {
 

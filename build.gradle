@@ -45,6 +45,10 @@ dependencies {
     // https://mvnrepository.com/artifact/com.sun.jersey/jersey-bundle
     compile group: 'com.sun.jersey', name: 'jersey-bundle', version: '1.19.4'
 
+    // Irgendwas für JSON
+    // https://mvnrepository.com/artifact/org.glassfish.jersey.media/jersey-media-json-jackson
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.27'
+
 
     // ASM CORE
     // https://mvnrepository.com/artifact/asm/asm-all
