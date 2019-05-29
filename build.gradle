@@ -56,18 +56,18 @@ dependencies {
 
     // JSR
     // https://mvnrepository.com/artifact/org.apache.bval/bval-jsr
-    //compile group: 'org.apache.bval', name: 'bval-jsr', version: '1.1.1'
+    compile group: 'org.apache.bval', name: 'bval-jsr', version: '1.1.1'
 
     // https://mvnrepository.com/artifact/javax.ws.rs/jsr311-api
     compile group: 'javax.ws.rs', name: 'jsr311-api', version: '1.1.1'
 
     // JAVA-JSON
-    // https://mvnrepository.com/artifact/org.json/json
-    //compile group: 'org.json', name: 'json', version: '20180130'
+    //https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20180130'
 
     // GENSON (JSON for Jersey)
     // https://mvnrepository.com/artifact/com.owlike/genson
-    compile group: 'com.owlike', name: 'genson', version: '1.5'
+   // compile group: 'com.owlike', name: 'genson', version: '1.5'
 
 
     // JUNIT
