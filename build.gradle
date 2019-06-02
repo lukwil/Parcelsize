@@ -12,7 +12,7 @@ sourceSets
         {
             main {
                 java {
-                    srcDirs 'src/main'
+                    srcDirs 'src'
                 }
             }
             test {
@@ -66,7 +66,7 @@ dependencies {
 
 
     // Download Jackson (for JSON interaction in JAVA code)
-    //testCompile("org.codehaus.jackson:jackson-mapper-asl:1.9.0")
+   // testCompile("org.codehaus.jackson:jackson-mapper-asl:1.9.0")
 
     // Download selenium plugins for UAT Tests
     compile group: 'net.bytebuddy', name: 'byte-buddy', version: '1.8.15'

@@ -14,12 +14,18 @@ public class MessageRessource {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response message(Parcelsize parcelsize) {
 		Parcelsize p = new Parcelsize();
-		p.setHeight(parcelsize.getHeight()); 
-		p.setLength(parcelsize.getLength());
-		p.setWidth(parcelsize.getWidth());
+		Output o = new Output();
+		o.height = parcelsize.getHeight();
+		o.length = parcelsize.getLength();
+		o.width = parcelsize.getWidth();
 		p.calculateSize();
-		System.out.println(p.toString());
-        return Response.status(202).entity(p)
+		o.size = p.getSize();
+		//p.setHeight(parcelsize.getHeight());
+		//p.setLength(parcelsize.getLength());
+		//p.setWidth(parcelsize.getWidth());
+		//p.calculateSize();
+		//System.out.println(p.toString());
+		return Response.ok().entity(o)
                 .build();
 	    //return parcelsize;
 	}
