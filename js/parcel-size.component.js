@@ -65,16 +65,27 @@ angular.module('parcelConfig').component('parcelSize', {
                 size: this.parcelsize.size
             };
             // Greife auf Microservice zu zu
-            $http.post("http://localhost:8081/api/parcelsize", data)
-                .then(function (response) {
-                    // First function handles success
-                    console.log(response.data);
-
-                    self.parcelsize.size = response.data.size;
-                }, function (response) {
-                    // Second function handles error
-                    console.log(response);
-                });
+            // $http.post("http://localhost:8081/api/parcelsize", data)
+            //     .then(function (response) {
+            //         // First function handles success
+            //         console.log(response.data);
+            //
+            //         self.parcelsize.size = response.data.size;
+            //     }, function (response) {
+            //         // Second function handles error
+            //         console.log(response);
+            //     });
+            var url = "http://localhost:8081/api/parcelsize/length/" + this.parcelsize.length + "/width/" + this.parcelsize.width + "/height/" + this.parcelsize.height;
+            $http({
+                method: 'GET',
+                url: url
+            }).then(function (response) {
+                console.log(response.data);
+                self.parcelsize.size = response.data.size;
+            }, function errorCallback(response) {
+                // error
+                console.log(response);
+            });
         }
     }
 });

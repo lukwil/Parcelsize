@@ -1,5 +1,6 @@
 package main;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 
-//@XmlRootElement
+@XmlRootElement
 public class Parcelsize {
     private String length;
     private String width;

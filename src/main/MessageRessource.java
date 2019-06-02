@@ -1,32 +1,23 @@
 package main;//package main2;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Path("parcelsize")
 public class MessageRessource {
-	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
+	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response message(Parcelsize parcelsize) {
-		Parcelsize p = new Parcelsize();
-		Output o = new Output();
-		o.height = parcelsize.getHeight();
-		o.length = parcelsize.getLength();
-		o.width = parcelsize.getWidth();
-		p.calculateSize();
-		o.size = p.getSize();
-		//p.setHeight(parcelsize.getHeight());
-		//p.setLength(parcelsize.getLength());
-		//p.setWidth(parcelsize.getWidth());
-		//p.calculateSize();
-		//System.out.println(p.toString());
-		return Response.ok().entity(o)
+	@Path("length/{length}/width/{width}/height/{height}")
+	public Response message(@PathParam("length") String length,
+							@PathParam("width") String width,
+							@PathParam("height") String height) {
+		Parcelsize parcelsize = new Parcelsize(length, width, height, "");
+		parcelsize.calculateSize();
+		return Response.ok().entity(parcelsize)
                 .build();
-	    //return parcelsize;
 	}
 }
