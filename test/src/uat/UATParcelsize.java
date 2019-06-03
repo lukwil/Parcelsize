@@ -34,6 +34,7 @@ public class UATParcelsize {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hoehe'])[1]/following::input[1]")).clear();
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hoehe'])[1]/following::input[1]")).sendKeys("5");
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Groesse: Teeeeset'])[1]/following::h4[1]")).click();
+        Thread.sleep(3000);
     }
 
     @AfterEach
