@@ -5,10 +5,12 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UATParcelsize {
     private WebDriver driver;
@@ -17,9 +19,12 @@ public class UATParcelsize {
 
     @BeforeEach
     public void setUp() throws Exception {
+        Thread.sleep(10000);
         String homeDir = System.getProperty("user.home");
         System.setProperty("webdriver.gecko.driver", homeDir + "/data/geckodriver");
-        driver = new FirefoxDriver();
+        FirefoxOptions options = new FirefoxOptions();
+        options.setHeadless(true);
+        driver = new FirefoxDriver(options);
     }
 
     @Test
@@ -35,6 +40,7 @@ public class UATParcelsize {
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hoehe'])[1]/following::input[1]")).sendKeys("5");
         driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Groesse: Teeeeset'])[1]/following::h4[1]")).click();
         Thread.sleep(3000);
+        assertEquals("Groesse: XS", driver.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Groesse berechnen'])[1]/following::h4[1]")).getText());
     }
 
     @AfterEach
