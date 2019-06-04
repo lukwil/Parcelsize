@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Parcelsize.iml" filepath="$PROJECT_DIR$/Parcelsize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Parcelsize.gatling.iml" filepath="$PROJECT_DIR$/.idea/modules/Parcelsize.gatling.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Parcelsize.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Parcelsize.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Parcelsize.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Parcelsize.test.iml" />
     </modules>

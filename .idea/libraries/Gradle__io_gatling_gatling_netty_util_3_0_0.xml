@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.gatling:gatling-netty-util:3.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.gatling/gatling-netty-util/3.0.0/d0a1f8593a09d20a740f84dc968ccbc58bc04a46/gatling-netty-util-3.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.gatling/gatling-netty-util/3.0.0/108314156191a971232a28b0f8e78c8f917356e/gatling-netty-util-3.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

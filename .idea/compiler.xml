@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="Parcelsize.gatling" target="1.8" />
       <module name="Parcelsize.main" target="1.8" />
       <module name="Parcelsize.test" target="1.8" />
     </bytecodeTargetLevel>

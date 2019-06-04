@@ -39,6 +39,19 @@ jar {
 // end::jar[]
 
 
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "gradle.plugin.com.github.lkishalmi.gatling:gradle-gatling-plugin:3.0.2"
+    }
+}
+
+apply plugin: "com.github.lkishalmi.gatling"
+
 // tag::dependencies[]
 dependencies {
     // JERSEY
@@ -71,6 +84,10 @@ dependencies {
     // Download selenium plugins for UAT Tests
     compile group: 'net.bytebuddy', name: 'byte-buddy', version: '1.8.15'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+
+    // https://mvnrepository.com/artifact/gradle.plugin.com.github.lkishalmi.gatling/gradle-gatling-plugin
+   // compile group: 'com.github.lkishalmi.gatling', name: 'gradle-gatling-plugin', version: '3.0.2'
+
 
     //Download phantomjs for web testing
     compile group: 'com.codeborne', name: 'phantomjsdriver', version: '1.4.4'

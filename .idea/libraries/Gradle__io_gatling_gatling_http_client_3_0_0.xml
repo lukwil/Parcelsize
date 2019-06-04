@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.gatling:gatling-http-client:3.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.gatling/gatling-http-client/3.0.0/90845f1bb40ed1b70fbef4521b99002f780a47cb/gatling-http-client-3.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.gatling/gatling-http-client/3.0.0/ff7e4efeb5f5cfb37b4584631845ff065eccf3aa/gatling-http-client-3.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
